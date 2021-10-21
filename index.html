@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                background-color: #1D1D1D;
+                color:#fff;
+            }
+            input:focus{
+                outline: none;
+                
+            }
+             div::after{
+                 content: "";
+                 display: block;
+                 width: 0px;
+                 height: 1px;
+                 background-color: red;
+                 transition: all 0.2s linear;
+            }
+            div:hover::after{
+                width: 50px;
+            }
+            input ~ span::after{
+                /*step1*/
+                content: "";
+                display: block;
+                width: 0px;
+                height: 2px;
+                background-color: red;
+                transition: all 0.2s linear;
+
+            }
+            input:focus ~ span::after {
+                /*step2*/
+                width: 170px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>hrllo sir </div>
+        <hr>
+        <form>
+            <input type="text" >
+            <span> 
+                
+            </span>
+        </form>
+    </body>
+</html>
